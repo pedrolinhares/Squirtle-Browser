@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QWebView>
+#include "CommandLine.h"
 
 class MainWindow : public QMainWindow {
 	public:
@@ -10,6 +11,7 @@ class MainWindow : public QMainWindow {
 
 	private:
 		QWebView* view;
+		CommandLine* command_line;
 };
 
 #endif

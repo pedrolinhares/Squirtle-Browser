@@ -13,8 +13,10 @@ MOC_DIR = build
 DESTDIR = bin
 
 # INPUT
-HEADERS += src/MainWindow.h
+HEADERS += src/MainWindow.h \
+           src/CommandLine.h
 
 SOURCES += src/main.cpp \
-		   src/MainWindow.cpp
+	   src/MainWindow.cpp \
+           src/CommandLine.cpp
 
