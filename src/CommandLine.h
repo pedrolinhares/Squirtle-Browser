@@ -4,9 +4,15 @@
 #include <QLineEdit>
 
 class CommandLine : public QLineEdit {
+	Q_OBJECT
     public:
-        typedef QLineEdit super;
 		CommandLine(QWidget* parent);
+
+    public slots:
+		void executeCommand();
+
+	signals:
+		void commandExecuted(QString url);
 };
 
 #endif
