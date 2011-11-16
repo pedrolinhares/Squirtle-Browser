@@ -15,7 +15,13 @@ void CommandLine::executeCommand()
 {
 	QString command = text();
 	QRegExp open(":open (.*)");
+	QRegExp rx("\\b(http://|https://)\\b");
 	QRegExp newTab(":tabnew (.*)");
+
+	int i = rx.indexIn(command);
+	if (open.exactMatch(command) && i == -1)
+		emit(openUrlRequested("http://" + open.cap(1)));
+	
 	if (open.exactMatch(command))
 		emit(openUrlRequested(open.cap(1)));
 

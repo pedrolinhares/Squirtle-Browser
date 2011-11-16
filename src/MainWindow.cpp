@@ -76,6 +76,7 @@ void MainWindow::openNewTab() {
 
 	int tabIndex = tabWidget->addTab(new_view, url.toString());
 	tabWidget->setCurrentIndex(tabIndex);
+	//tabWidget->setStyleSheet("width: 40px;");
 }
 
 void MainWindow::openNewTab(QString url) {
