@@ -15,7 +15,11 @@ void CommandLine::executeCommand()
 {
 	QString command = text();
 	QRegExp open(":open (.*)");
+	QRegExp newTab(":tabnew (.*)");
 	if (open.exactMatch(command))
-		emit(commandExecuted(open.cap(1)));
+		emit(openUrlRequested(open.cap(1)));
+
+	if (newTab.exactMatch(command))
+		emit(newTabRequested(newTab.cap(1)));
 	emit(clear());
 }

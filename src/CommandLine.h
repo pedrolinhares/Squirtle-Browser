@@ -12,7 +12,8 @@ class CommandLine : public QLineEdit {
 		void executeCommand();
 
 	signals:
-		void commandExecuted(QString url);
+		void openUrlRequested(QString url);
+		void newTabRequested(QString url);
 };
 
 #endif
