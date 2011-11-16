@@ -88,5 +88,4 @@ void MainWindow::openNewTab(QString url) {
 
 void MainWindow::closeTab(int index) {
 	delete tabWidget->widget(index);
-	tabWidget->removeTab(index);
 }
